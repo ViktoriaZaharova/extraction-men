@@ -1,0 +1,1178 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+
+html, body
+  overflow-x: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  transition: .3s ease
+  text-decoration: none
+  outline: none
+
+  &:hover, &:focus
+    outline: none
+    text-decoration: none
+
+label
+  display: flex
+
+input, select, textarea
+  outline: none
+  box-shadow: none
+  box-sizing: border-box
+  border: none
+  width: 100%
+  font-family: $default-font
+  padding: 0
+  margin: 0
+
+button
+  outline: none
+  box-sizing: border-box
+  padding: 0
+  box-shadow: none
+
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+.container
+  max-width: 1140px
+  width: 100%
+  margin: 0 auto
+  position: relative
+  display: flex
+  flex-wrap: wrap
+
+.btn-mobile__menu
+  display: none
+  flex-direction: row
+  align-items: center
+  margin: 0 0 0 auto
+
+.btn-burger
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 15px
+  color: #4f366e
+  margin: 0 10px 0 0
+  span
+    display: block
+    width: 100%
+    height: 2px
+    margin: 0 0 2px
+    background: #4f366e
+    &:last-child
+      margin: 0
+
+.w-100
+  width: 100%
+
+strong
+  display: inline-flex
+
+h1
+  font-weight: 800
+  font-size: 44px
+  letter-spacing: 1.1px
+  line-height: 48px
+
+  span
+    line-height: 20px
+    display: block
+    text-transform: uppercase
+    font-size: 18px
+    font-weight: 300
+    letter-spacing: 0.81px
+
+h2
+  text-align: center
+  width: 100%
+  margin: 0 auto
+  font-size: 32px
+  color: #241f2a
+  letter-spacing: 0.8px
+  font-weight: 600
+
+  strong
+    font-weight: bold
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  border: none
+
+.btn-yellow
+  background: #ffe506
+  border-radius: 5px
+  font-size: 19.5px
+  letter-spacing: 0.49px
+  font-weight: 600
+  color: #110f10
+  height: 55px
+
+  &:hover
+    background: #e0c905
+
+
+//header
+header
+  background: #fff
+  padding: 19px 0 20px
+  position: relative
+  z-index: 2
+
+  .container
+    align-items: center
+    justify-content: space-between
+
+.navigation
+  width: 100%
+
+.menu
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+
+  li
+    margin: 0 30px 0 0
+
+    &:last-child
+      margin: 0
+
+    &:first-child
+      margin: 0 auto 0 0
+
+    a
+      text-transform: uppercase
+      color: #277bc9
+      font-family: 'SegoeUI', sans-serif
+
+      &:hover
+        color: #000
+
+//main
+main
+  background: #4f366e
+  color: #fff
+  padding: 19px 0
+
+  .container
+    flex-direction: column
+    align-items: flex-start
+
+    > *
+      z-index: 2
+      position: relative
+
+    .main-image
+      position: absolute
+      right: -229px
+      top: -60px
+      z-index: 1
+
+  .description
+    font-size: 17px
+    max-width: 635px
+    width: 100%
+    margin: 10px 0 30px
+
+.author
+  font-size: 14px
+  font-family: 'SegoeUI', sans-serif
+  color: #fff
+  margin: 0 58px 0 0
+
+  h3
+    font-size: 18px
+    font-family: 'SegoeUI-bold', sans-serif
+
+.date
+  border: solid 2px #790dff
+  text-transform: uppercase
+  font-size: 18px
+  letter-spacing: 0.45px
+  padding: 2px 28px 3px
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+.main-top
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 0 69px
+
+.sale-info
+  background: #790dff
+  border-radius: 10px
+  color: #fff
+  display: flex
+  align-items: stretch
+  justify-content: space-between
+  max-width: 658px
+  width: 100%
+  margin: 0 0 82px
+
+.sale-info__left
+  padding: 23px 30px 25px
+  width: calc(100% - 190px)
+
+  p
+    letter-spacing: 0.45px
+    font-size: 18px
+
+  .btn
+    margin: 16px 0 0
+    width: 100%
+
+.sale-info__right
+  max-width: 190px
+  width: 100%
+  padding: 0 15px 20px
+  font-size: 16px
+  border-left: 1px solid #943dff
+
+  strong
+    font-family: 'SegoeUI-bold', sans-serif
+
+  .icon
+    width: 55px
+    height: 55px
+    margin: -30px 0 18px
+
+.situation
+  h4
+    margin: 0 0 40px
+    font-size: 22px
+    letter-spacing: 0.55px
+    font-family: 'helvetica', sans-serif
+    position: relative
+    padding: 0 383px 0 0
+
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      bottom: 0
+      width: 367px
+      height: 2px
+      opacity: .2
+      background: #fff
+
+    strong
+      font-family: 'helvetica-bold', sans-serif
+
+.situation-content
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+
+.situation-box
+  margin: 0 0 24px
+  max-width: 268px
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  color: #bfb5cc
+  font-size: 14px
+
+  h3
+    margin: 0 0 10px
+    font-weight: 600
+    font-size: 16px
+    color: #fff
+
+//get
+.get
+  padding: 80px 0
+
+  h2
+    margin: 0 auto 31px
+    font-family: 'helvetica', sans-serif
+
+    strong
+      font-family: 'helvetica-bold', sans-serif
+
+.get-content
+  border: solid 10px #f6f5f7
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 62px 63px 36px 54px
+
+.get-box
+  margin: 0 0 30px
+  display: flex
+  align-items: flex-start
+
+  &:first-child
+    order: -1
+
+  &:nth-child(3)
+    order: -1
+
+  .number
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    width: 25px
+    min-width: 25px
+    height: 25px
+    border: solid 1px #4f366e
+      radius: 50%
+    color: #4f366e
+    font-weight: 600
+    font-size: 13px
+
+  .text
+    padding: 0 0 0 11px
+    box-sizing: border-box
+    max-width: 457px
+    width: 100%
+
+    p
+      color: #241f2a
+      line-height: 1.5
+
+  h3
+    color: #4f366e
+    font-weight: 600
+    font-size: 18px
+    margin: 0 0 14px
+
+//record
+.record
+  background: #4f366e
+  color: #fff
+  overflow: hidden
+
+  .container
+    padding: 50px 0
+    flex-direction: column
+    align-items: flex-start
+
+  h2, .date, .btn, .bonus
+    position: relative
+    z-index: 2
+
+  .date
+    text-transform: none
+    font-size: 20px
+    height: 40px
+    width: 409px
+    padding: 0
+
+  .record-image
+    position: absolute
+    right: -70px
+    top: 0
+    z-index: 1
+
+  h2
+    text-align: left
+    color: #fff
+    margin: 15px 0 19px
+    max-width: 560px
+    width: 100%
+
+  .btn
+    margin: 25px 0 0
+    width: 330px
+
+.bonus
+  display: flex
+  align-items: flex-start
+
+  .plus
+    margin: 0 12px 0 0
+    font-size: 59px
+    letter-spacing: 1.48px
+    font-family: 'SegoeUI', sans-serif
+    line-height: 60px
+
+  p
+    max-width: 481px
+    width: 100%
+    letter-spacing: 0.55px
+    font-size: 22px
+
+//about-training
+.about-training
+  padding: 80px 0 95px
+  background: #f9f9f9
+
+  h2
+    margin: 0 0 33px
+
+    strong
+      display: inline
+
+  .text
+    font-size: 20px
+    line-height: 1.6
+    text-align: center
+    padding: 0 85px
+
+  .text-item
+    text-align: center
+    color: #241f2a
+    line-height: 1.44
+    border:
+      top: 1px solid rgba(#4f366e, .3)
+      bottom: 1px solid rgba(#4f366e, .3)
+    padding: 30px 35px
+    margin: 30px 0 0
+    font-size: 18px
+
+//advantages
+.advantages
+  padding: 96px 0 81px
+
+  .container
+    border: solid 10px #f6f5f7
+    padding: 90px 86px 20px
+
+.advantages-content
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: 39px 0 0
+
+.advantages-box
+  max-width: 399px
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  margin: 0 0 72px
+
+  &:nth-child(3)
+    max-width: 252px
+
+  &:nth-child(4)
+    max-width: 344px
+
+  &:last-child
+    max-width: 186px
+
+  .icon
+    display: flex
+    align-items: center
+    justify-content: center
+    border: solid 2px #790dff
+      radius: 50%
+    width: 100px
+    height: 100px
+    margin: 0 auto 24px
+
+  h3
+    color: #241f2a
+    font-size: 20px
+    font-weight: 600
+    margin: 0 0 12px
+
+  p
+    text-align: center
+    font-style: italic
+    color: #110f10
+    font-size: 18px
+    font-family: 'SegoeUI', sans-serif
+
+//timetable
+.timetable
+  background: #f9f9f9
+  padding: 83px 0 86px
+
+  h2
+    margin: 0 auto 35px
+
+.timetable-status
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  color: #241f2a
+  font-size: 20px
+  margin: 0 0 28px
+
+.status
+  width: 144px
+  height: 45px
+  border-radius: 10px
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  color: #fff
+  font-size: 20px
+  font-weight: bold
+  margin: 0 15px 0 0
+
+.btn-green
+  background: #8fd24f
+
+.btn-red-light
+  background-color: #f34826
+
+.timetable-box
+  width: 100%
+  background: #fff
+  border-radius: 10px
+  display: flex
+  align-items: flex-start
+  padding: 30px 49px 29px 37px
+  box-sizing: border-box
+  margin: 0 0 10px
+
+  &:last-child
+    margin: 0
+
+  .line
+    display: flex
+    align-items: center
+    color: #241f2a
+    font-size: 20px
+    margin: 0 0 25px
+
+    h3
+      margin: 0 36px 0 0
+      font-weight: bold
+
+  .text-item
+    width: 100%
+    display: flex
+    align-items: flex-start
+    flex-wrap: wrap
+
+    ul
+      line-height: 1.88
+      font-size: 16px
+      margin: 0 59px 0 0
+
+      &:last-child
+        margin: 0
+
+  .time
+    letter-spacing: 0.5px
+
+
+.timetable-box__icon
+  width: 55px
+  min-width: 55px
+  height: 55px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 10px 0 0
+
+.occupation-content
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+
+
+.occupation-box
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  margin: 0 0 8px
+  border: solid 1px #d7d5da
+    radius: 10px
+  padding: 17px 20px
+  min-height: 140px
+  max-width: 319px
+  width: 100%
+  color: #241f2a
+  font-size: 17px
+  letter-spacing: 0.45px
+
+  &:nth-child(2), &:nth-child(5), &:nth-child(6)
+    max-width: 260px
+
+  &:nth-child(3), &:nth-child(4)
+    max-width: 190px
+
+  &:nth-child(7)
+    max-width: 160px
+
+  &:last-child
+    max-width: 287px
+
+
+.date-time
+  color: #6e647a
+  font-size: 14px
+  margin: 0 0 15px
+
+//price
+.price
+  padding: 83px 0 87px
+
+  .sale
+    margin: 18px auto 46px
+    font-size: 22px
+
+.price-content
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+
+
+.price-box
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  box-shadow: 0 11px 24px 0 rgba(79, 54, 110, 0.11)
+  background-color: #ffffff
+  width: 360px
+  border-radius: 10px
+  padding: 42px 39px 50px
+  box-sizing: border-box
+  color: #241f2a
+
+  h3
+    text-align: center
+    margin: 17px auto 28px
+    font-size: 26px
+    color: #241f2a
+    font-weight: bold
+
+  .description
+    text-align: center
+    margin: 0 0 22px
+
+  .btn
+    width: 280px
+    margin: 14px auto 0
+
+.list-stars
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+  li
+    margin: 0 9px 0 0
+
+    &:last-child
+      margin: 0
+
+.list-plus
+  width: 100%
+  font-size: 16px
+  color: #241f2a
+  margin: 0 0 35px
+
+  li
+    position: relative
+    width: 100%
+    padding: 5px 0 5px 25px
+    border-bottom: 1px dashed #bebebe
+
+    &:before
+      content: '+'
+      position: absolute
+      left: 0
+      top: 4px
+      color: #4f366e
+      font-size: 24px
+      font-weight: bold
+      line-height: 24px
+
+.price-box__bottom
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  width: 100%
+
+.sale-box
+  position: relative
+  font-size: 14px
+  color: #241f2a
+  max-width: 100px
+  width: 100%
+
+  &:before
+    content: ''
+    position: absolute
+    left: -33px
+    top: 4px
+    width: 28px
+    height: 28px
+    background: url("../img/sale.png") no-repeat center
+      size: contain
+
+  strong
+    font-weight: bold
+    color: #4f366e
+    font-size: 16px
+    display: block
+
+.price-wrapper
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+.new-price
+  color: #241f2a
+  font-size: 26px
+  font-weight: bold
+
+.old-price
+  color: #241f2a
+  font-size: 18px
+  position: relative
+  margin: 7px 0 0 0
+
+  &:before
+    content: ''
+    position: absolute
+    width: 74px
+    height: 2px
+    background: #4f366e
+    left: 50%
+    transform: translate(-50%, -50%) rotate(-15deg)
+    top: 50%
+
+//leading
+.leading
+  padding: 58px 0 0
+  background: #f9f9f9
+  color: #241f2a
+
+  .container
+    justify-content: space-between
+    align-items: flex-start
+
+  h2
+    text-align: left
+    margin: 0 0 13px
+
+  .description
+    margin: 26px 0 40px
+
+.name
+  padding: 0 0 15px
+  text-transform: uppercase
+  font-size: 18px
+  border-bottom: 3px solid #6c1ad1
+  display: flex
+  align-items: center
+  justify-content: space-between
+  max-width: 472px
+  width: 100%
+
+  strong
+    font-weight: 600
+
+
+.leading-content
+  max-width: 530px
+  width: 100%
+  position: relative
+  z-index: 1
+
+.leading-image
+  max-width: 583px
+  width: 100%
+
+.leading-about
+  border-radius: 5px
+  background-color: #ffffff
+  max-width: 533px
+  width: 100%
+  padding: 32px 70px 34px 64px
+
+.list-check
+  li
+    position: relative
+    padding: 0 0 0 37px
+    color: #110f10
+    margin: 0 0 15px
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 5px
+      width: 21px
+      height: 21px
+      background: url("../img/check.png") no-repeat center top
+        size: 21px
+
+    &:last-child
+      margin: 0
+
+.leading-advantages
+  width: 100%
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+  margin: 40px 0 0 0
+
+.leading-advantages__box
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  color: #110f10
+  font-size: 18px
+  max-width: 155px
+  width: 100%
+  margin: 0 0 87px
+  &:first-child
+    max-width: 100px
+  strong
+    font-size: 40px
+    font-weight: bold
+    margin: 0 0 15px
+
+
+//stages-training
+.stages-training
+  padding: 79px 0 86px
+
+.stages-training__content
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  margin: 29px 0 0 0
+
+.stages-training__box
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: #4f366e
+  font-size: 18px
+  text-align: center
+  width: 100%
+  margin: 150px 0 0
+  position: relative
+  padding: 0 0 45px
+  p
+    white-space: nowrap
+    position: absolute
+    left: 50%
+    bottom: 0
+    transform: translate(-50%,0)
+  .number
+    width: 90px
+    height: 90px
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    color: #ffffff
+    background: #4f366e
+    font-size: 52px
+    font-weight: 800
+    margin: 0 auto 19px
+    position: relative
+    z-index: 1
+  &:before
+    content: ''
+    position: absolute
+    height: 2px
+    background: #4f366e
+    width: 145px
+    right: -70px
+    top: 0
+    transform: rotate(-30deg)
+  &:nth-child(even)
+    padding: 45px 0 0 0
+    margin: 0
+    &:before
+      top: 150px
+      transform: rotate(30deg)
+    .number
+      order: 1
+      margin: 19px auto 0
+    p
+      left: 50%
+      top: 0
+      bottom: auto
+      transform: translate(-50%,0)
+  &:last-child
+    &:before
+      display: none
+
+//reviews
+.reviews
+  margin: 0 0 60px
+  .container
+    border: solid 10px #f6f5f7
+    padding: 66px 39px
+  .links
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    color: #277bc9
+    font-size: 15.5px
+    margin: 20px auto 0
+    .icon
+      width: 22px
+      margin: 0 10px 0 0
+
+.reviews-content
+  padding: 59px 30px 0
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  flex-wrap: wrap
+  position: relative
+  height: 100%
+  max-height: 890px
+  box-sizing: border-box
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 130px
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%)
+    z-index: 1
+
+.reviews-column
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.reviews-box
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  box-shadow: 0 2px 14.9px 0.2px rgba(106, 111, 115, 0.2)
+  background-color: #ffffff
+  width: 320px
+  padding: 13px 6px 12px
+  margin: 0 0 9px
+  &:before
+    content: ''
+    position: absolute
+    bottom: 16px
+    right: 17px
+    width: 35px
+    height: 35px
+    background: #4f366e url("../img/search.png") no-repeat center
+      size: 21px
+    transition: .3s ease
+  &:hover
+    &:before
+      background: #7e56b0 url("../img/search.png") no-repeat center
+        size: 21px
+
+//section-call
+.section-call
+  color: #2f2f2f
+  padding: 83px 0 79px
+  .container
+    flex-direction: column
+    align-items: center
+  p
+    margin: 18px auto 35px
+    display: flex
+    align-items: center
+    font-size: 22px
+  .btn
+    width: 278px
+  .list-social
+    margin: 43px 0 0
+    li
+      a
+        width: 55px
+        height: 55px
+        display: flex
+        align-items: center
+        justify-content: center
+
+.phone
+  display: inline-flex
+  color: #2f2f2f
+  margin: 0 0 0 30px
+
+.list-social
+  display: flex
+  align-items: center
+  li
+    margin: 0 21px 0 0
+    &:last-child
+      margin: 0
+
+footer
+  background: #171515
+
+.footer-top
+  padding: 20px 0
+  border-bottom: 1px solid #3a3838
+  .container
+    justify-content: space-between
+    align-items: center
+  .author
+    font-size: 11.5px
+    h3
+      font-size: 15px
+
+.menu-footer
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  li
+    margin: 0 25px 0 0
+    &:last-child
+      margin: 0
+    a
+      color: #ffffff
+      font-family: 'SegoeUI', sans-serif
+      &:hover
+        opacity: .7
+
+.footer-bottom
+  padding: 14px 0
+  .container
+    justify-content: space-between
+    align-items: center
+  .links
+    color: #bdbdbd
+    font-size: 13px
+    font-family: 'SegoeUI', sans-serif
+    margin: 0 20px 0 0
+    &:last-child
+      margin: 0
+  .list-social
+    li
+      margin: 0 11px 0 0
+      &:last-child
+        margin: 0
+      a
+        width: 23px
+        height: 23px
+        border-radius: 50%
+  .contacts-item
+    p
+      .links
+        margin: 0 0 0 10px
+
+.contacts-item
+  display: flex
+  align-items: center
+  margin: 0 auto
+  font-family: 'SegoeUI-Light', sans-serif
+  font-size: 13px
+  p
+    display: flex
+    align-items: center
+    color: #7c7c7c
+    .links
+      font-family: 'SegoeUI-Light', sans-serif
+      font-size: 13px
+      color: #bdbdbd
+
+
+
+.mail
+  color: #bebebe
+  font-size: 13px
+  font-family: 'SegoeUI-Light', sans-serif
+  margin: 0 30px 0 0
+
+.links-wrapper
+  display: flex
+  align-items: center
+
+
+@import "media"
+// Всегда в конце
